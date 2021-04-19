@@ -1,4 +1,16 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import './styles/global.css';
+import PrimeVue from 'primevue/config';
+import Button from 'primevue/button';
+import InputText from 'primevue/inputtext';
+import 'primevue/resources/themes/saga-blue/theme.css';
+import 'primevue/resources/primevue.min.css';
 
-createApp(App).mount('#app')
+
+
+const app = createApp(App)
+app.use(PrimeVue)
+app.component('Button', Button);
+app.component('InputText', InputText);
+app.mount('#app')
